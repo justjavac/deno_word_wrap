@@ -48,13 +48,13 @@ wrap(str, {width: 60});
 
 Type: `String`
 
-Default: `` (none)
+Default: `""` (none)
 
 The string to use at the beginning of each line.
 
 **Example:**
 
-```js
+```ts
 wrap(str, {indent: '      '});
 ```
 
@@ -62,13 +62,13 @@ wrap(str, {indent: '      '});
 
 Type: `String`
 
-Default: `\n`
+Default: `"`
 
 The string to use at the end of each line.
 
 **Example:**
 
-```js
+```ts
 wrap(str, {newline: '\n\n'});
 ```
 
@@ -82,11 +82,10 @@ An escape function to run on each line after splitting them.
 
 **Example:**
 
-```js
-var xmlescape = require('xml-escape');
+```ts
 wrap(str, {
-  escape: function(string){
-    return xmlescape(string);
+  escape: function(str: string): string {
+    return str.toUpperCase();
   }
 });
 ```
@@ -101,7 +100,7 @@ Trim trailing whitespace from the returned string. This option is included since
 
 **Example:**
 
-```js
+```ts
 wrap(str, {trim: true});
 ```
 
@@ -115,7 +114,7 @@ Break a word between any two letters when the word is longer than the specified 
 
 **Example:**
 
-```js
+```ts
 wrap(str, {cut: true});
 ```
 
