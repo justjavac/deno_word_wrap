@@ -8,28 +8,28 @@
 export interface IOptions {
   /**
    * The width of the text before wrapping to a new line.
-   * 
+   *
    * default `50`
    */
   width?: number;
 
   /**
    * The string to use at the beginning of each line.
-   * 
+   *
    * default `""` (none)
    */
   indent?: string;
 
   /**
    * The string to use at the end of each line.
-   * 
+   *
    * default `"\n"`
    */
   newline?: string;
 
   /**
    * An escape function to run on each line after splitting them.
-   * 
+   *
    * default `(str: string) => string`
    */
   escape?: (str: string) => string;
@@ -38,7 +38,7 @@ export interface IOptions {
    * Trim trailing whitespace from the returned string.
    * This option is included since `.trim()` would also strip
    * the leading indentation from the first line.
-   * 
+   *
    * default `true`
    */
   trim?: boolean;
@@ -54,7 +54,7 @@ export interface IOptions {
 /**
  * Wrap words to a specified length.
  * @param str
- * @param options 
+ * @param options
  */
 export default function wrap(str: string, options?: IOptions): string {
   options = options || {};
