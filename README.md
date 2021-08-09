@@ -68,7 +68,7 @@ wrap(str, {indent: '      '});
 
 Type: `String`
 
-Default: `"`
+Default: `\n`
 
 The string to use at the end of each line.
 
