@@ -1,5 +1,5 @@
 // see https://github.com/jonschlinkert/word-wrap/blob/0a0e06bfe215f3bf3f15f084b3640ed354770a19/test.js
-import { assertEquals } from "https://deno.land/std@0.68.0/testing/asserts.ts";
+import { assertEquals } from "https://deno.land/std@0.103.0/testing/asserts.ts";
 
 import wrap from "./mod.ts";
 

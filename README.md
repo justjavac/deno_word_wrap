@@ -11,9 +11,11 @@ Wrap words to a specified length.
 ## Usage
 
 ```js
-import wrap from 'https://deno.land/x/word_wrap/mod.ts';
+import wrap from "https://deno.land/x/word_wrap/mod.ts";
 
-wrap('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
+wrap(
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+);
 ```
 
 Results in:
@@ -47,7 +49,7 @@ The width of the text before wrapping to a new line.
 **Example:**
 
 ```ts
-wrap(str, {width: 60});
+wrap(str, { width: 60 });
 ```
 
 ### options.indent
@@ -61,21 +63,21 @@ The string to use at the beginning of each line.
 **Example:**
 
 ```ts
-wrap(str, {indent: '      '});
+wrap(str, { indent: "      " });
 ```
 
 ### options.newline
 
 Type: `String`
 
-Default: `"`
+Default: `\n`
 
 The string to use at the end of each line.
 
 **Example:**
 
 ```ts
-wrap(str, {newline: '\n\n'});
+wrap(str, { newline: "\n\n" });
 ```
 
 ### options.escape
@@ -90,9 +92,9 @@ An escape function to run on each line after splitting them.
 
 ```ts
 wrap(str, {
-  escape: function(str: string): string {
+  escape: function (str: string): string {
     return str.toUpperCase();
-  }
+  },
 });
 ```
 
@@ -102,12 +104,13 @@ Type: `Boolean`
 
 Default: `false`
 
-Trim trailing whitespace from the returned string. This option is included since `.trim()` would also strip the leading indentation from the first line.
+Trim trailing whitespace from the returned string. This option is included since
+`.trim()` would also strip the leading indentation from the first line.
 
 **Example:**
 
 ```ts
-wrap(str, {trim: true});
+wrap(str, { trim: true });
 ```
 
 ### options.cut
@@ -116,14 +119,16 @@ Type: `Boolean`
 
 Default: `false`
 
-Break a word between any two letters when the word is longer than the specified width.
+Break a word between any two letters when the word is longer than the specified
+width.
 
 **Example:**
 
 ```ts
-wrap(str, {cut: true});
+wrap(str, { cut: true });
 ```
 
 ## License
 
-[deno_word_wrap](https://github.com/justjavac/deno_word_wrap) is released under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
+[deno_word_wrap](https://github.com/justjavac/deno_word_wrap) is released under
+the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
